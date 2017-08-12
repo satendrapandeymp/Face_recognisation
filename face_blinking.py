@@ -5,7 +5,7 @@ import cv2
 testVar = raw_input("Enter the Ip of your phone (Droidcam only) like 192.168.1.100 \n")
 cam = "http://" + testVar + ":4747/mjpegfeed?640x480"
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(cam)
 
 # Inter location  of haarcascade_frontalface_default.xml from your computor
 face_cascade = cv2.CascadeClassifier('/home/pandey/opencv-master/data/haarcascades/haarcascade_frontalface_default.xml')  
