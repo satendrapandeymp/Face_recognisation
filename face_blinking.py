@@ -2,11 +2,13 @@ import numpy as np, urllib2, time
 import cv2
 
 #For connecting with droidcam
-testVar = raw_input("Enter the Ip of your phone like 192.168.1.100")
+testVar = raw_input("Enter the Ip of your phone (Droidcam only) like 192.168.1.100 \n")
 cam = "http://" + testVar + ":4747/mjpegfeed?640x480"
 
 cap = cv2.VideoCapture(0)
-face_cascade = cv2.CascadeClassifier('/home/pandey/opencv-master/data/haarcascades/haarcascade_frontalface_default.xml')
+
+# Inter location  of haarcascade_frontalface_default.xml from your computor
+face_cascade = cv2.CascadeClassifier('/home/pandey/opencv-master/data/haarcascades/haarcascade_frontalface_default.xml')  
 
 while(True):
 	ret, img = cap.read()
